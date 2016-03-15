@@ -40,23 +40,18 @@ class TableViewController: UITableViewController {
 //    cell.thirdTrigger = 0.75
   
     cell.addSwipeGesture(swipeGesture: SwipeCell.SwipeGesture.Right1, swipeMode: SwipeCell.SwipeMode.Slide, icon: UIImageView(image: UIImage(named: "cross")), color: .blueColor()) { (cell) -> () in
-      print(1)
       self.deleteCell(cell: cell)
     }
     cell.addSwipeGesture(swipeGesture: SwipeCell.SwipeGesture.Right2, swipeMode: SwipeCell.SwipeMode.Bounce, icon: UIImageView(image: UIImage(named: "list")), color: .redColor()) { (cell) -> () in
-      print(2)
       self.deleteCell(cell: cell)
     }
     cell.addSwipeGesture(swipeGesture: SwipeCell.SwipeGesture.Right3, swipeMode: SwipeCell.SwipeMode.Slide, icon: UIImageView(image: UIImage(named: "clock")), color: .orangeColor()) { (cell) -> () in
-      print(3)
       self.deleteCell(cell: cell)
     }
     cell.addSwipeGesture(swipeGesture: SwipeCell.SwipeGesture.Right4, swipeMode: SwipeCell.SwipeMode.Slide, icon: UIImageView(image: UIImage(named: "check")), color: .greenColor()) { (cell) -> () in
-      print(4)
       self.deleteCell(cell: cell)
     }
     cell.addSwipeGesture(swipeGesture: SwipeCell.SwipeGesture.Left1, swipeMode: SwipeCell.SwipeMode.Slide, icon: UIImageView(image: UIImage(named: "check")), color: .purpleColor()) { (cell) -> () in
-      print(-1)
       self.deleteCell(cell: cell)
     }
 
@@ -73,7 +68,6 @@ class TableViewController: UITableViewController {
   
   // MARK: - HELPER METHODS
   func deleteCell(cell cell: UITableViewCell) {
-    print("delete cell)")
     tableView.beginUpdates()
     items.removeAtIndex(items.indexOf((cell.textLabel?.text)!)!)
     tableView.indexPathForCell(cell)

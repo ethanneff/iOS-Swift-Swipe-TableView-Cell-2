@@ -354,7 +354,6 @@ class SwipeCell: UITableViewCell {
   }
   
   private func swipeDealloc() {
-    print("dealloc")
     // delay for animated delete of cell
     self.swipeDelegate = nil
     self.swipe = nil
