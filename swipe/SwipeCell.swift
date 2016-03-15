@@ -435,8 +435,7 @@ class SwipeCell: UITableViewCell {
   }
   
   private func swipeGetAnimationDuration(velocity velocity: CGPoint) -> NSTimeInterval {
-    
-    
+    // get the duration for the completing swipe
     let width: CGFloat = CGRectGetWidth(self.bounds)
     let animationDurationDiff: NSTimeInterval = kDurationHighLimit - kDurationLowLimit
     var horizontalVelocity: CGFloat = velocity.x
